@@ -48,7 +48,6 @@ public class FormAuthenticationProvider implements AuthenticationProvider {
         if (secretKey == null || !"secret".equals(secretKey)) {
             throw new InsufficientAuthenticationException("InsufficientAuthenticationException");
         }
-
         return new UsernamePasswordAuthenticationToken(accountContext.getAccount(), null, accountContext.getAuthorities());
     }
 
