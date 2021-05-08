@@ -6,15 +6,10 @@ import io.security.corespringsecurity.domain.AccountDto;
 import io.security.corespringsecurity.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-
-import java.security.Principal;
 
 @Controller
 @RequiredArgsConstructor
@@ -44,17 +39,17 @@ public class UserController {
         return "redirect:/";
     }
 
-    @GetMapping(value = "/mypage")
+    @GetMapping(value = "/myPage")
 //	public String myPage(@AuthenticationPrincipal Account account, Authentication authentication, Principal principal) throws Exception {
     public String myPage() throws Exception {
-        return "user/mypage";
+        return "user/myPage";
     }
 
     //
     @GetMapping("/order")
     public String order() {
 //		userService.order();
-        return "user/mypage";
+        return "user/myPage";
     }
 
 }
