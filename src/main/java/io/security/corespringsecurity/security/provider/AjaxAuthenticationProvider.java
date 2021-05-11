@@ -40,10 +40,10 @@ public class AjaxAuthenticationProvider implements AuthenticationProvider {
             throw new BadCredentialsException("Invalid password");
         }
 
-        String secretKey = ((FormWebAuthenticationDetails) authentication.getDetails()).getSecretKey();
-        if (secretKey == null || !"secret".equals(secretKey)) {
-            throw new InsufficientAuthenticationException("InsufficientAuthenticationException");
-        }
+//        String secretKey = ((FormWebAuthenticationDetails) authentication.getDetails()).getSecretKey();
+//        if (secretKey == null || !"secret".equals(secretKey)) {
+//            throw new InsufficientAuthenticationException("InsufficientAuthenticationException");
+//        }
         return new AjaxAuthenticationToken(accountContext.getAccount(), null, accountContext.getAuthorities());
     }
 
